@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="{{ url_for('static', filename='pyodide-0.22.1/pyodide.ts') }}"></script>
+<script type="text/javascript">
+  pyodide.ready.then(() => {
+    // Pyodide is ready to use
+  });
+</script>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>LongLongURL</title>
+    </head>
+    <body>
+        
+        <div class="main-page">
+            <div class="text-left">
+                <h3>Convert URLs to a LongLongURL</h3> 
+            </div>
+            <form action="" method="post">
+                <label for="id_og_url">Original URL:</label> &nbsp;
+                <input type="url" name="og_url" maxlength="1000" required id="id_og_url" />
+                <input type="submit" value="Convert to LongLongURL" />
+            </form>
+            <div>
+                <p>
+                    Created by Garrity | <a href="https://www.github.com/garrityv">GitHub</a>
+                     | Support Me <a href="https://www.buymeacoffee.com/garrity">Here</a>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

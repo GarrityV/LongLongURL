@@ -1,0 +1,45 @@
+package:
+  name: cryptography
+  version: 38.0.4
+  top-level:
+    - cryptography
+source:
+  url: https://files.pythonhosted.org/packages/e3/3f/41186b1f2fd86a542d399175f6b8e43f82cd4dfa51235a0b030a042b811a/cryptography-38.0.4.tar.gz
+  sha256: 175c1a818b87c9ac80bb7377f5520b7f31b3ef2a0004e2420319beadedb67290
+  patches:
+    - patches/0001-Use-patched-instant.patch
+build:
+  script: |
+    export OPENSSL_INCLUDE_PATH=$(pkg-config --cflags-only-I --dont-define-prefix openssl)
+    export OPENSSL_LIBRARY_PATH=$(pkg-config --libs-only-L --dont-define-prefix openssl)
+    source $CARGO_HOME/env
+    # TODO: remove this when instant makes a release
+    git clone --depth 1 https://github.com/hoodmane/instant.git --branch emscripten-no-leading-underscore
+  cflags: |
+    -Wno-implicit-function-declaration
+    $(OPENSSL_INCLUDE_PATH)
+  ldflags: |
+    $(OPENSSL_LIBRARY_PATH)
+    -Wl,--no-entry
+requirements:
+  run:
+    - openssl
+    - six
+    - cffi
+  host:
+    - openssl
+    - cffi
+test:
+  imports:
+    - cryptography
+    - cryptography.fernet
+    - cryptography.hazmat
+    - cryptography.utils
+    - cryptography.x509
+about:
+  home: https://github.com/pyca/cryptography
+  PyPI: https://pypi.org/project/cryptography
+  summary:
+    cryptography is a package which provides cryptographic recipes and primitives
+    to Python developers.
+  license: BSD-3-Clause OR Apache-2.0

@@ -1,0 +1,17 @@
+package:
+  name: unyt
+  version: 2.9.3
+  top-level:
+    - unyt
+source:
+  url: https://files.pythonhosted.org/packages/ea/78/c05ae0bf409c612c058cbd4a65c77b239ae41f623f0780e19efc691e681a/unyt-2.9.3-py2.py3-none-any.whl
+  sha256: 87eaf38dae96a7385fbfab5e875119b5afdbc707bcfa1948710d2e843534ccc7
+requirements:
+  run:
+    - numpy
+    - sympy
+about:
+  home: https://github.com/yt-project/unyt
+  PyPI: https://pypi.org/project/unyt
+  summary: A package for handling numpy arrays with units
+  license: BSD license

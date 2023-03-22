@@ -1,0 +1,16 @@
+package:
+  name: biopython
+  version: "1.80"
+  top-level:
+    - Bio
+    - BioSQL
+requirements:
+  run:
+    - numpy
+source:
+  sha256: 52805e9af88767e450e2df8113b5bc59e964e2e8a7bb803a83570bdbb51c0e43
+  url: https://files.pythonhosted.org/packages/cb/8d/7cd217252797f7088847d667101b490df5644f0ff5202441e444b2b620ba/biopython-1.80.tar.gz
+about:
+  home: https://biopython.org/
+  PyPI: https://pypi.org/project/biopython
+  summary: Freely available tools for computational molecular biology.

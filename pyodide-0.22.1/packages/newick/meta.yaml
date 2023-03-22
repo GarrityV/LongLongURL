@@ -1,0 +1,13 @@
+package:
+  name: newick
+  version: 1.4.0
+  top-level:
+    - newick
+source:
+  url: https://files.pythonhosted.org/packages/28/b5/8254e098b9f8d6dd2768451f26b38a0863a5410a319b16a7ace629c72f5e/newick-1.4.0-py2.py3-none-any.whl
+  sha256: 5a44d12b3cacab1a4450a1af483b1d9542e854bd326e461b30ad8f72415e15e4
+about:
+  home: https://github.com/dlce-eva/python-newick
+  PyPI: https://pypi.org/project/newick
+  summary: A python module to read and write the Newick format
+  license: Apache 2

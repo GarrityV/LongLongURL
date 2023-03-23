@@ -4,7 +4,7 @@
  Reddit doesn't like URL converting services, and I don't like that.
  
  So in order to bypass this (and to have fun doing it), I just made my own rather \
- than look for a barely used service that isn't on Reddit's whitelist.
+ than look for a barely used service that isn't on Reddit's blacklist.
 
 # How to use
  [1] Go to longlongurl.pythonanywhere.com\
